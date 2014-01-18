@@ -1,4 +1,9 @@
 ansible-drush
-=============
+========
 
-Ansible role for install Drush
+Ansible role for installing Drush
+
+License
+-------
+
+Apache v2
