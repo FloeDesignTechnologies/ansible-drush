@@ -1,8 +1,7 @@
 ---
 galaxy_info:
   author: Carl Hall
-  description:
-  company:
+  description: Ansible role for installing Drush
   license: Apache v2
   min_ansible_version: 1.2
   platforms:
