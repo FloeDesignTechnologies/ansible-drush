@@ -15,6 +15,11 @@ Role Variables
 
 * **drushrc**: The content of the global Drush configuration file (/etc/drush/drushrc.php) as a dict.
 
+Requirements
+------------
+
+* The php-pear role is used to install PEAR, discover the Drush's channel and install Drush.
+
 License
 -------
 
