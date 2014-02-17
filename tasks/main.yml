@@ -1,5 +1,5 @@
 ---
-- name: Ensure global Drush folder
+- name: Global Drush configuration folder
   file: path=/etc/drush/ state=directory
   tags: [drush]
 - name: Global Drush configuration (drushrc) file
