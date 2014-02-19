@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Pierre Buyle
-  description: Ansible role for installing Drush
+  description: Ansible role for configuring Drush
   license: Apache v2
   min_ansible_version: 1.2
   platforms:
@@ -22,3 +22,4 @@ dependencies:
     pear_packages:
       - drush/drush
       - Console_Table
+    when: drush_pear_install_enabled
