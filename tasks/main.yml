@@ -3,5 +3,5 @@
   file: path=/etc/drush/ state=directory
   tags: [drush]
 - name: Global Drush configuration (drushrc) file
-  template: src=drushrc.j2 dest=/etc/drush/drushrc.php validate='php -l %s'
+  template: src=drushrc.j2 dest=/etc/drush/drushrc.php validate='php -l %s' mode=0644
   tags: [drush]
