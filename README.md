@@ -32,12 +32,12 @@ Role Variables
   installation method, default to ```/opt/drush```.
 * **drush_git_bin**: The path for a symlink to the drush binary that will be
   created when using the ```git``` installation method. Make sure the directory
-  containing the synlink is on the system PATH.
+  containing the symlink is on the system PATH.
 * **drush_pear_packages**: The list of PEAR package to install when using the
-  ```pear``` installation method, defaults to ```['pear.drush.org']```.
+  ```pear``` installation method, defaults to ```['drush/drush','Console_Table']```.
 * **drush_pear_channels**: The list of PEAR channels to discover when using the
   ```pear``` installation method, defaults to
-  ```['drush/drush','Console_Table']```.
+  ```['pear.drush.org']```.
 
 Example usage
 -------------
