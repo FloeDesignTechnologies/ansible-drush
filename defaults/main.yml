@@ -1,4 +1,5 @@
 ---
+drush_install_mode: composer
 
 drush_composer_bin: /usr/local/bin/composer
 drush_composer_version: 6.*
