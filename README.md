@@ -1,22 +1,24 @@
 ansible-drush
 =============
 
-Ansible role to configure [Drush](https://github.com/drush-ops/drush).
+Ansible role to install and configure [Drush](https://github.com/drush-ops/drush).
+
+* Install Drush
+* Configure Drush (`/etc/drush/drushrc.php`)
+* Configure BASH completion
 
 Role Variables
 --------------
 
 * **drushrc**: The content of the global Drush configuration file
-  (/etc/drush/drushrc.php) as a dict.
+  (`/etc/drush/drushrc.php`) as a dict.
 * **drush_install_mode**: Install mode for, one of
-    * ```composer``` (default): Install Drush using the Composer gobal require
-    command.
-    * ```git```: Install Drush from Git repo (following the
-    [INSTALL - MANUAL](https://github.com/drush-ops/drush) instructions).
-    * ```pear```: Install Drush using PEAR.
+    * ```composer``` (default): To install Drush for a single user using the
+      Composer global require command.
+    * ```git```: To install for all users on the server using a Git checkout
+      and Composer.
     * ```none```: Do not install Drush.
-* **drush_composer_bin**: Path the the composer binary used for the
-  ```composer``` and ```git``` installation modes.
+* **drush_composer_bin**: Path the the composer binary.
 * **drush_composer_version**: The version to install when using the
   ```composer``` installation mode, defaults to ```6.*```.
 * **drush_composer_user**: The user to run Composer global require command as
@@ -33,11 +35,6 @@ Role Variables
 * **drush_git_bin**: The path for a symlink to the drush binary that will be
   created when using the ```git``` installation method. Make sure the directory
   containing the symlink is on the system PATH.
-* **drush_pear_packages**: The list of PEAR package to install when using the
-  ```pear``` installation method, defaults to ```['drush/drush','Console_Table']```.
-* **drush_pear_channels**: The list of PEAR channels to discover when using the
-  ```pear``` installation method, defaults to
-  ```['pear.drush.org']```.
 
 Example usage
 -------------
@@ -54,15 +51,13 @@ Requirements
 
 * Composer installed globally, if using the ```git``` or ```composer```
   installation mode.
-* Pear, if using the ```pear``` installation mode.
 * Make sure Composer's global bin directory is on the system PATH if using the
   ```composer``` installation mode.
 
 TODOs
 -----
 
-* Setup drush.complete.sh for bash completion for PEAR installation.
-* Setup sites aliases.
+* Configure Drush aliases (`/etc/drush/aliases.drushrc.php`)
 
 License
 -------

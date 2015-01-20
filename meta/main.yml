@@ -3,7 +3,7 @@ galaxy_info:
   author: Pierre Buyle
   description: Ansible role for configuring Drush
   license: Apache v2
-  min_ansible_version: 1.2
+  min_ansible_version: 1.8
   platforms:
   - name: Ubuntu
     versions:
